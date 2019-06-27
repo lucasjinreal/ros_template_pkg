@@ -20,7 +20,6 @@ using namespace perception;
 int main(int argc, char **argv) {
 
   ros::init(argc, argv, "wavehands_stop");
-  std::cout << "I am OK.\n";
   WaveHandsStop app;
   app.Run();
   return 0;

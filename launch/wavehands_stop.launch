@@ -1,0 +1,12 @@
+<launch>
+
+
+    <node pkg="wavehands_stop" type="wavehands_stop_node" name="wavehands_stop">
+        <param name="model_path" value="${find_package wavehands_stop}/models/human_pose_light_model.pt" />
+        <param name="image_topic_src" value="/cti/sensors/image/front_mono_depth" />
+        <param name="pub_topic_src" value="/cti/perception/wavehands_stop_signal" />
+
+        <param name="is_debug" value="true" />
+    </node>
+
+</launch>
