@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /media/jintain/sg/deploy/standalone_test/catkin_ws/src/wavehands_stop/cmake-build-debug/devel/setup.sh

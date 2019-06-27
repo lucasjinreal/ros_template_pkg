@@ -1,0 +1,8 @@
+prefix=/media/jintain/sg/deploy/standalone_test/catkin_ws/src/wavehands_stop/cmake-build-debug/devel
+
+Name: wavehands_stop
+Description: Description of wavehands_stop
+Version: 0.0.0
+Cflags: 
+Libs: -L/media/jintain/sg/deploy/standalone_test/catkin_ws/src/wavehands_stop/cmake-build-debug/devel/lib 
+Requires: 
