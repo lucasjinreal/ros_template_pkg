@@ -42,13 +42,20 @@ void WaveHandsStop::image_callback(const sensor_msgs::ImageConstPtr &msg) {
   }
   if (is_debug) {
 	// render poses on image and show it out
+
 	renderHumanPose(poses, crt_image);
-	cv::imshow("res", crt_image);
+	cv::Mat res;
+	cv::cvtColor(crt_image, res, cv::COLOR_RGB2BGR);
+	if (ges_ctl_msg.has_wave_hands_stop) {
+	  cv::putText(res, "stop", cv::Point(50, 50),  cv::FONT_HERSHEY_COMPLEX, 0.8, Scalar(255, 0, 0));
+	}
+	cv::imshow("res", res);
 	cv::waitKey(1);
   }
   // publish the msg
   stop_signal_publisher_.publish(ges_ctl_msg);
 }
+
 
 void WaveHandsStop::Run() {
   ros::NodeHandle private_nh("~");
